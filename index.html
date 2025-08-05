@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Girlsync - PCOS Risk Assessment: Empowering women to assess their PCOS risk with an interactive tool.">
+  <title>Girlsync - PCOS Risk Assessment</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Add Font Awesome for icons (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <script>
+    window.addEventListener('mouseover', initLandbot, { once: true });
+    window.addEventListener('touchstart', initLandbot, { once: true });
+    var myLandbot;
+    function initLandbot() {
+      if (!myLandbot) {
+        var s = document.createElement('script');
+        s.type = "module"
+        s.async = true;
+        s.addEventListener('load', function() {
+          var myLandbot = new Landbot.Livechat({
+            configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2879474-QGC8Y7IJ5T5YIY8O/index.json',
+          });
+        });
+        s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs';
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+      }
+    }
+    </script>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="#"><img src=C:\Users\palak\Downloads\Girlsync.png alt="Girlsync Logo"></a>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#disclaimer">Disclaimer</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="intro">
+      <div class="container">
+        <div class="intro-content">
+          <div class="intro-text">
+            <h2>Take Charge of Your Health</h2>
+            <p>Discover your PCOS risk with Girlsync's engaging questionnaire. Receive tailored insights and guidance just for you.</p>
+            <p> Early detection can change lives, yet
+              awareness remains low. GirlSync exists to
+              break the silence, provide clarity, and
+              empower women to take control of their
+              reproductive health.</p>
+            <div class="consent">
+              <label>
+                <input type="checkbox" id="consent-checkbox"> I understand and agree to proceed with the assessment.
+              </label>
+            </div>
+            <a href="assessment.html" class="cta-button disabled" id="start-assessment" disabled>Start Assessment</a>
+          </div>
+          <div class="intro-image">
+            <div class="scrolling-gallery">
+              <img src="https://cdn.prod.website-files.com/65b16f0ee351dc8f2068f512/65f70305ffeca9001ef0eed3_dyk1%201.webp" alt="PCOS Health Image 1">
+              <img src="https://cdn.prod.website-files.com/65b16f0ee351dc8f2068f512/65f7245af60a9e44af2c3fc9_dyk2%201.webp" alt="PCOS Health Image 2">
+              <img src="https://cdn.prod.website-files.com/65b16f0ee351dc8f2068f512/662e6dc4d22eb282a247ec04_Health.webp" alt="PCOS Health Image 3">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="resources" id="resources">
+      <div class="container">
+        <h2>Learn More About PCOS</h2>
+        <div class="boxes-container">
+          <div class="box">
+            <h3>What is PCOS?</h3>
+            <p>Learn about Polycystic Ovary Syndrome (PCOS), its definition, and how it affects the body.</p>
+            <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/polycystic-ovary-syndrome-pcos" target="_blank">Read More</a>
+          </div>
+          <div class="box">
+            <h3>Symptoms & Causes</h3>
+            <p>Discover the common symptoms and underlying causes of PCOS.</p>
+            <a href="https://www.who.int/news-room/fact-sheets/detail/polycystic-ovary-syndrome" target="_blank">Read More</a>
+          </div>
+          <div class="box">
+            <h3>Management Tips</h3>
+            <p>Explore effective strategies and tips for managing PCOS symptoms.</p>
+            <a href="https://www.healthline.com/health/polycystic-ovary-disease" target="_blank">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-carousel" id="videos">
+      <div class="container">
+        <div class="carousel">
+          <button class="prev-btn" onclick="changeVideo(-1)">&#10094;</button>
+          <div class="carousel-content">
+            <iframe class="carousel-video" src="https://www.youtube.com/embed/HzG-zaMYZZ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="carousel-video" src="https://www.youtube.com/embed/Az9lWdqebaU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="carousel-video" src="https://www.youtube.com/embed/TduTthL5Fr8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <button class="next-btn" onclick="changeVideo(1)">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="disclaimer" id="disclaimer">
+      <div class="container">
+        <p><strong>Disclaimer:</strong> Girlsync is an informational tool and not a diagnostic service. Please consult a healthcare professional for medical advice.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Girlsync. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // JavaScript for Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
